@@ -5,12 +5,12 @@ export default function Contact() {
       <p className="text-gray-300 mb-2">
         Let's connect! I'm open to freelance work, collaborations, or full-time roles.
       </p>
-      <p className="text-indigo-400">📧 mirul.asyrani@gmail.com</p>
+      <p className="text-indigo-400">📧 mirulasyrani@gmail.com</p>
       <p className="text-indigo-400">
         🌐 <a href="https://linkedin.com/in/amirulasyrani" target="_blank" rel="noreferrer" className="underline">LinkedIn Profile</a>
       </p>
       <p className="text-indigo-400">
-        💻 <a href="https://github.com/amirulasyrani" target="_blank" rel="noreferrer" className="underline">GitHub</a>
+        💻 <a href="https://github.com/mirulasyrani" target="_blank" rel="noreferrer" className="underline">GitHub</a>
       </p>
     </div>
   );
