@@ -5,10 +5,14 @@ import type { ComponentType } from "react";
 import todoImage from "../assets/images/todo-login.png";
 import todoDashboard from "../assets/images/todo-dashboard.png";
 import portfolioImage from "../assets/images/portfolio-website.png";
-import studioHome from "../assets/images/studio-home.png"; // new
-import studioGallery from "../assets/images/studio-gallery.png"; // new
-import studioInvoice from "../assets/images/studio-invoice.png"; // new
-import studioImage from "../assets/images/studio-image.png"; // new
+import studioHome from "../assets/images/studio-home.png";
+import studioGallery from "../assets/images/studio-gallery.png";
+import studioInvoice from "../assets/images/studio-invoice.png";
+import studioImage from "../assets/images/studio-image.png";
+
+import trackerThumb from "../assets/images/recruitment-tracker.png";
+import trackerScreenshot from "../assets/images/recruitment-tracker-1.png";
+import trackerLogin from "../assets/images/recruitment-tracker-login.png";
 
 // ✅ Type definition for each project
 export interface Project {
@@ -77,5 +81,23 @@ export const projectsData: Project[] = [
     icons: [FaReact, FaNodeJs, FaDatabase, FaCss3Alt],
     github: "https://github.com/mirulasyrani/peeking-studio.git",
     demo: "https://peeking-studio.pages.dev/",
+  },
+  {
+    id: 4,
+    title: "Recruitment Tracker",
+    description:
+      "A healthcare recruitment dashboard for managing patient appointments and staff actions.",
+    details: [
+      "JWT-based login system",
+      "Appointment management for GP-referred patients",
+      "Integrated with PostgreSQL and hosted on Vercel",
+      "Uses Bearer token auth and localStorage",
+    ],
+    tech: ["React", "Node.js", "PostgreSQL", "Tailwind CSS"],
+    image: trackerThumb,
+    images: [trackerScreenshot, trackerLogin],
+    icons: [FaReact, FaNodeJs, FaDatabase, FaCss3Alt],
+    github: "https://github.com/mirulasyrani/recruitment-agency-tracker",
+    demo: "https://recruitment-assessment.vercel.app/dashboard",
   },
 ];
