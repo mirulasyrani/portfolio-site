@@ -14,7 +14,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     details,
     tech,
     image,
-    images = [], // fallback to empty array
+    images = [],
     icons,
     github,
     demo,
@@ -49,13 +49,13 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
   const handleTouchEnd = (e: React.TouchEvent) => {
     if (touchStartX.current === null) return;
-
     const deltaX = e.changedTouches[0]?.clientX - touchStartX.current;
     if (deltaX > 50) handlePrev();
     else if (deltaX < -50) handleNext();
-
     touchStartX.current = null;
   };
+
+  const currentImage = images[currentIndex] ?? null;
 
   return (
     <>
@@ -131,7 +131,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
       {/* Modal with swipe & animation */}
       <AnimatePresence>
-        {isModalOpen && images.length > 0 && (
+        {isModalOpen && currentImage && (
           <motion.div
             className="fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center"
             initial={{ opacity: 0 }}
@@ -145,7 +145,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               onTouchStart={handleTouchStart}
               onTouchEnd={handleTouchEnd}
             >
-              {/* ❌ Close Button */}
               <button
                 onClick={() => setIsModalOpen(false)}
                 className="absolute z-50 top-4 right-6 text-white text-4xl font-bold hover:text-emerald-400"
@@ -153,10 +152,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 &times;
               </button>
 
-              {/* 🖼️ Image Preview */}
               <motion.img
-                key={images[currentIndex]}
-                src={images[currentIndex]}
+                key={`image-${currentIndex}`}
+                src={currentImage}
                 alt={`${title} preview ${currentIndex + 1}`}
                 className="w-full max-h-[80vh] object-contain rounded-lg z-10"
                 initial={{ x: 100, opacity: 0 }}
@@ -165,7 +163,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 transition={{ duration: 0.4 }}
               />
 
-              {/* ⬅️ Arrows */}
               <div className="absolute inset-y-0 left-2 flex items-center z-50">
                 <button
                   onClick={handlePrev}
