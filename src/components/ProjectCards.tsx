@@ -49,9 +49,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
   const handleTouchEnd = (e: React.TouchEvent) => {
     if (touchStartX.current === null) return;
-    const deltaX = e.changedTouches[0]?.clientX - touchStartX.current;
+
+    const changedTouch = e.changedTouches[0];
+    if (!changedTouch) return;
+
+    const deltaX = changedTouch.clientX - touchStartX.current;
     if (deltaX > 50) handlePrev();
     else if (deltaX < -50) handleNext();
+
     touchStartX.current = null;
   };
 
