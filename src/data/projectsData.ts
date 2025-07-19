@@ -1,4 +1,4 @@
-import { FaReact, FaNodeJs, FaDatabase, FaCss3Alt } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaDatabase, FaCss3Alt, FaHtml5, FaJsSquare } from "react-icons/fa";
 import type { ComponentType } from "react";
 
 // ✅ Image imports
@@ -15,6 +15,9 @@ import trackerLogin from "../assets/images/recruitment-tracker-login.png";
 import ecommerceImg1 from "../assets/images/ecommercestorefront-1.png";
 import ecommerceImg2 from "../assets/images/ecommercestorefront-2.png";
 import ecommerceImg3 from "../assets/images/ecommercestorefront-3.png";
+// ✅ Import the new weather app images
+import weatherApp1 from "../assets/images/weather-app-1.png";
+import weatherApp2 from "../assets/images/weather-app-2.png";
 
 
 // ✅ Type definition for each project
@@ -120,5 +123,24 @@ export const projectsData: Project[] = [
     icons: [FaReact, FaCss3Alt],
     github: "https://github.com/mirulasyrani/ecommerce-store.git",
     demo: "https://ecommerce-store-3w9.pages.dev/",
+  },
+  // --- Weather App Project moved to the bottom ---
+  {
+    id: 6,
+    title: "Weather App",
+    description:
+      "A clean and modern weather application that provides current conditions and a 5-day forecast for any city.",
+    details: [
+      "Built with vanilla HTML, JavaScript, and the Tailwind CDN for rapid styling",
+      "Fetches data from the OpenWeatherMap API",
+      "Features a dynamic city suggestion dropdown for Malaysian cities",
+      "Fully responsive design for mobile and desktop",
+    ],
+    tech: ["HTML", "Tailwind CSS", "JavaScript"],
+    image: weatherApp1,
+    images: [weatherApp1, weatherApp2],
+    icons: [FaHtml5, FaCss3Alt, FaJsSquare],
+    github: "https://github.com/mirulasyrani/weather-app-MY.git",
+    demo: "https://weather-app-my.pages.dev/",
   },
 ];
