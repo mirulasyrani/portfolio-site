@@ -9,10 +9,13 @@ import studioHome from "../assets/images/studio-home.png";
 import studioGallery from "../assets/images/studio-gallery.png";
 import studioInvoice from "../assets/images/studio-invoice.png";
 import studioImage from "../assets/images/studio-image.png";
-
 import trackerThumb from "../assets/images/recruitment-tracker.png";
 import trackerScreenshot from "../assets/images/recruitment-tracker-1.png";
 import trackerLogin from "../assets/images/recruitment-tracker-login.png";
+import ecommerceImg1 from "../assets/images/ecommercestorefront-1.png";
+import ecommerceImg2 from "../assets/images/ecommercestorefront-2.png";
+import ecommerceImg3 from "../assets/images/ecommercestorefront-3.png";
+
 
 // ✅ Type definition for each project
 export interface Project {
@@ -99,5 +102,23 @@ export const projectsData: Project[] = [
     icons: [FaReact, FaNodeJs, FaDatabase, FaCss3Alt],
     github: "https://github.com/mirulasyrani/recruitment-agency-tracker",
     demo: "https://recruitment-assessment.vercel.app/dashboard",
+  },
+  {
+    id: 5,
+    title: "E-Commerce Storefront",
+    description:
+      "A responsive e-commerce frontend with product filtering, cart features, and modern UI built using React and Tailwind CSS.",
+    details: [
+      "Built with React, Tailwind CSS, Zustand, React Router, and Vite",
+      "Product filtering with URL-based routing and dynamic product pages",
+      "Shopping cart functionality using Zustand global state",
+      "Deployed to Cloudflare Pages for fast global delivery and easy access",
+    ],
+    tech: ["React", "Tailwind CSS", "Zustand", "Vite", "React Router"],
+    image: ecommerceImg1,
+    images: [ecommerceImg1, ecommerceImg2, ecommerceImg3],
+    icons: [FaReact, FaCss3Alt],
+    github: "https://github.com/mirulasyrani/ecommerce-store.git",
+    demo: "https://ecommerce-store-3w9.pages.dev/",
   },
 ];
