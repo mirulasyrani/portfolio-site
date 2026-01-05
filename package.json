@@ -3,6 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "description": "Modern portfolio website for Mirul Asyrani - Full-stack developer. Built with React, TypeScript, Vite, and Tailwind CSS.",
+  "author": "Mirul Asyrani <mirulasyrani@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mirulasyrani/portfolio"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

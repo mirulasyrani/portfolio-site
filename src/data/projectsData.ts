@@ -1,4 +1,5 @@
-import { FaReact, FaNodeJs, FaDatabase, FaCss3Alt, FaHtml5, FaJsSquare } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaDatabase, FaCss3Alt, FaHtml5, FaJsSquare, FaJava } from "react-icons/fa";
+import { SiSpring, SiPostgresql, SiTypescript, SiNextdotjs, SiGraphql } from "react-icons/si";
 import type { ComponentType } from "react";
 
 // ✅ Image imports
@@ -18,6 +19,19 @@ import ecommerceImg3 from "../assets/images/ecommercestorefront-3.png";
 // ✅ Import the new weather app images
 import weatherApp1 from "../assets/images/weather-app-1.png";
 import weatherApp2 from "../assets/images/weather-app-2.png";
+// ✅ Import TruHealth images
+import truHealthHome from "../assets/images/truehealth-home.png";
+import truHealthServices from "../assets/images/truehealth-services.png";
+import truHealthAbout from "../assets/images/truehealth-aboutus.png";
+// ✅ Import TaskFlow images
+import taskFlowKanban from "../assets/images/taskflow-kanban.png";
+import taskFlowDashboard from "../assets/images/taskflow-dashboard.png";
+import taskFlowCalendar from "../assets/images/taskflow-calendar.png";
+import taskFlowTaskPage from "../assets/images/taskflow-taskpage.png";
+// ✅ Import Pricing Portal images
+import pricingPortalOverview from "../assets/images/pricing-portal overview.png";
+import pricingPortalSupplier from "../assets/images/pricing-portal-supplierupload.png";
+import pricingPortalVisualizer from "../assets/images/pricing-portal-visualizer.png";
 
 
 // ✅ Type definition for each project
@@ -142,5 +156,63 @@ export const projectsData: Project[] = [
     icons: [FaHtml5, FaCss3Alt, FaJsSquare],
     github: "https://github.com/mirulasyrani/weather-app-MY.git",
     demo: "https://weather-app-my.pages.dev/",
+  },
+  {
+    id: 7,
+    title: "TruHealth Clinic Website",
+    description:
+      "A modern, full-stack web application for TruHealth Clinic in Kota Damansara featuring appointment booking and contact management.",
+    details: [
+      "Built with React (TypeScript) frontend and Spring Boot backend",
+      "RESTful API with full CRUD operations for appointments and contact messages",
+      "JWT authentication with protected routes and role-based access",
+      "H2 database for development with JPA/Hibernate for data persistence",
+      "Responsive modern UI with gradient themes and smooth navigation",
+    ],
+    tech: ["React", "TypeScript", "Spring Boot", "Java", "PostgreSQL"],
+    image: truHealthHome,
+    images: [truHealthHome, truHealthServices, truHealthAbout],
+    icons: [FaReact, SiTypescript, SiSpring, FaJava, FaDatabase],
+    github: "https://github.com/mirulasyrani/true-health-clinic.git",
+    demo: "https://true-health-clinic.pages.dev/",
+  },
+  {
+    id: 8,
+    title: "TaskFlow - Task Management System",
+    description:
+      "Full-stack task manager with Spring Boot & React featuring Kanban boards, time tracking, and collaboration tools.",
+    details: [
+      "Kanban board with drag & drop functionality and calendar view",
+      "Time tracking with start/stop timers and analytics dashboard",
+      "Task CRUD operations with priorities, due dates, subtasks, and comments",
+      "JWT authentication with BCrypt password hashing and rate limiting",
+      "Dark mode support with keyboard shortcuts for improved productivity",
+    ],
+    tech: ["React", "Spring Boot", "PostgreSQL", "Tailwind CSS", "JWT"],
+    image: taskFlowKanban,
+    images: [taskFlowKanban, taskFlowDashboard, taskFlowCalendar, taskFlowTaskPage],
+    icons: [FaReact, SiSpring, SiPostgresql, FaCss3Alt],
+    github: "https://github.com/mirulasyrani/neurogine-task.git",
+    demo: null,
+  },
+  {
+    id: 9,
+    title: "Enterprise Pricing Management System",
+    description:
+      "Full-stack enterprise solution for managing pricing data with database infrastructure, GraphQL API, and business intelligence integration.",
+    details: [
+      "Built with Next.js 14, TypeScript, and PostgreSQL with GraphQL API",
+      "Python-based database infrastructure with schema migrations and containerized deployment",
+      "Spreadsheet integration with automatic data mapping for bulk imports",
+      "Business intelligence platform integration for advanced analytics",
+      "Automated data collection and synchronization from multiple external sources",
+      "REST and GraphQL API integrations for seamless data flow",
+    ],
+    tech: ["Next.js", "TypeScript", "PostgreSQL", "GraphQL", "Python", "Docker"],
+    image: pricingPortalOverview,
+    images: [pricingPortalOverview, pricingPortalSupplier, pricingPortalVisualizer],
+    icons: [SiNextdotjs, SiTypescript, SiPostgresql, SiGraphql, FaDatabase],
+    github: null,
+    demo: null,
   },
 ];
