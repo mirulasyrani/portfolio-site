@@ -13,9 +13,6 @@ export function Hero() {
     return () => clearInterval(interval);
   }, []);
 
-  const scrollingText = "Creativity is my craft • Abstract thinking is my passion • Building the future • ";
-  const repeatedText = scrollingText.repeat(3);
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -38,21 +35,9 @@ export function Hero() {
 
   return (
     <section className="relative w-full min-h-screen flex flex-col justify-center items-center px-6 md:px-12">
-      {/* Scrolling text banner */}
-      <div className="absolute top-32 left-0 w-full overflow-hidden border-y border-gray-200 dark:border-gray-800 py-4 bg-gray-50/50 dark:bg-gray-900/50">
-        <div className="flex whitespace-nowrap animate-scroll">
-          <span className="text-2xl md:text-3xl font-light tracking-wide text-gray-400 dark:text-gray-600">
-            {repeatedText}
-          </span>
-          <span className="text-2xl md:text-3xl font-light tracking-wide text-gray-400 dark:text-gray-600">
-            {repeatedText}
-          </span>
-        </div>
-      </div>
-      
       {/* Main content */}
       <motion.div 
-        className="max-w-4xl mx-auto text-center space-y-8 mt-20"
+        className="max-w-4xl mx-auto text-center space-y-8"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -121,21 +106,6 @@ export function Hero() {
             </motion.a>
           </div>
         </motion.div>
-      </motion.div>
-      
-      {/* Scroll indicator */}
-      <motion.div 
-        className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 0.4, y: 0 }}
-        transition={{ delay: 1.5, duration: 1 }}
-      >
-        <span className="text-xs uppercase tracking-wider text-gray-400 dark:text-gray-500 font-medium">Scroll</span>
-        <motion.div 
-          className="w-px h-12 bg-gradient-to-b from-blue-600 to-orange-500"
-          animate={{ scaleY: [1, 1.5, 1] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        />
       </motion.div>
     </section>
   );

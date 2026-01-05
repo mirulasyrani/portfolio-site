@@ -32,29 +32,29 @@ export default function App() {
       
       <Navbar />
       <main id="main-content" className="text-gray-900 dark:text-gray-100">
-        <section id="home" className="min-h-screen flex flex-col items-center justify-center">
+        <section id="home" className="min-h-screen flex flex-col items-center justify-center snap-start">
           <Hero />
         </section>
 
-        <section id="about" className="min-h-screen flex flex-col items-center justify-center px-6 py-24">
+        <section id="about" className="min-h-screen flex flex-col items-center justify-center px-6 py-24 snap-start">
           <div data-aos="fade-right" className="w-full max-w-7xl border-2 border-gray-200 dark:border-gray-800 rounded-2xl bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm p-8 md:p-12 shadow-lg">
             <About />
           </div>
         </section>
 
-        <section id="projects" className="min-h-screen flex flex-col items-center justify-center px-6 py-24">
+        <section id="projects" className="min-h-screen flex flex-col items-center justify-center px-6 py-24 snap-start">
           <div data-aos="fade-right" className="w-full max-w-7xl border-2 border-gray-200 dark:border-gray-800 rounded-2xl bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm p-8 md:p-12 shadow-lg">
             <Projects />
           </div>
         </section>
 
-        <section id="skills" className="min-h-screen flex flex-col items-center justify-center px-6 py-24">
+        <section id="skills" className="min-h-screen flex flex-col items-center justify-center px-6 py-24 snap-start">
           <div data-aos="fade-right" className="w-full max-w-7xl border-2 border-gray-200 dark:border-gray-800 rounded-2xl bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm p-8 md:p-12 shadow-lg">
             <Skills />
           </div>
         </section>
 
-        <section id="contact" className="min-h-screen flex flex-col items-center justify-center px-6 py-24">
+        <section id="contact" className="min-h-screen flex flex-col items-center justify-center px-6 py-24 snap-start">
           <div data-aos="fade-right" className="w-full max-w-7xl border-2 border-gray-200 dark:border-gray-800 rounded-2xl bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm p-8 md:p-12 shadow-lg">
             <Contact />
           </div>

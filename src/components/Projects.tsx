@@ -58,7 +58,7 @@ export default function Projects() {
       <AnimatePresence mode="wait">
         <motion.div 
           key={filter}
-          className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+          className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
