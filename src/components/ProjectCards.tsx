@@ -58,12 +58,12 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       <div
         data-aos="fade-up"
         data-aos-delay={id * 100}
-        className="group"
+        className="group flex flex-col h-full"
       >
         {/* Image */}
         {image && (
           <div 
-            className="relative overflow-hidden rounded-xl mb-4 aspect-video bg-white/[0.02] border border-white/5 cursor-pointer"
+            className="relative overflow-hidden rounded-xl mb-5 aspect-video bg-white/[0.02] border border-white/5 cursor-pointer"
             onClick={() => image && setIsModalOpen(true)}
           >
             <img
@@ -75,18 +75,20 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           </div>
         )}
 
-        {/* Title */}
-        <h3 
-          className="text-2xl font-semibold mb-2 text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 cursor-pointer"
-          onClick={() => image && setIsModalOpen(true)}
-        >
-          {title}
-        </h3>
-        
-        <p className="text-gray-600 dark:text-gray-400 text-base mb-3 leading-relaxed font-light">{description}</p>
+        {/* Title + Description grouped */}
+        <div className="mb-5">
+          <h3 
+            className="text-2xl font-semibold mb-2 text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 cursor-pointer"
+            onClick={() => image && setIsModalOpen(true)}
+          >
+            {title}
+          </h3>
+          
+          <p className="text-gray-600 dark:text-gray-400 text-base leading-relaxed font-light">{description}</p>
+        </div>
 
         {/* Tech stack badges */}
-        <div className="flex flex-wrap gap-2 mb-4">
+        <div className="flex flex-wrap gap-2 mb-5">
           {tech.slice(0, 4).map((t) => (
             <span
               key={t}
@@ -98,7 +100,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
 
         {/* Action buttons */}
-        <div className="flex gap-4 text-sm font-light">
+        <div className="flex gap-4 text-sm font-light mt-auto">
           {demo && (
             <a
               href={demo}
